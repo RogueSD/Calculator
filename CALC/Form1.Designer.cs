@@ -35,6 +35,8 @@
             this.resultLabel = new System.Windows.Forms.Label();
             this.addRB = new System.Windows.Forms.RadioButton();
             this.multiplyRB = new System.Windows.Forms.RadioButton();
+            this.subRB = new System.Windows.Forms.RadioButton();
+            this.divRB = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // arg1TB
@@ -103,9 +105,35 @@
             this.multiplyRB.UseVisualStyleBackColor = true;
             this.multiplyRB.CheckedChanged += new System.EventHandler(this.multiplyRB_CheckedChanged);
             // 
+            // subRB
+            // 
+            this.subRB.AutoSize = true;
+            this.subRB.Location = new System.Drawing.Point(12, 42);
+            this.subRB.Name = "subRB";
+            this.subRB.Size = new System.Drawing.Size(80, 17);
+            this.subRB.TabIndex = 4;
+            this.subRB.TabStop = true;
+            this.subRB.Text = "Вычитание";
+            this.subRB.UseVisualStyleBackColor = true;
+            this.subRB.CheckedChanged += new System.EventHandler(this.subRB_CheckedChanged);
+            // 
+            // divRB
+            // 
+            this.divRB.AutoSize = true;
+            this.divRB.Location = new System.Drawing.Point(103, 42);
+            this.divRB.Name = "divRB";
+            this.divRB.Size = new System.Drawing.Size(70, 17);
+            this.divRB.TabIndex = 5;
+            this.divRB.TabStop = true;
+            this.divRB.Text = "Деление";
+            this.divRB.UseVisualStyleBackColor = true;
+            this.divRB.CheckedChanged += new System.EventHandler(this.divRB_CheckedChanged);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(394, 94);
+            this.Controls.Add(this.divRB);
+            this.Controls.Add(this.subRB);
             this.Controls.Add(this.multiplyRB);
             this.Controls.Add(this.addRB);
             this.Controls.Add(this.calcButton);
@@ -137,6 +165,8 @@
         private System.Windows.Forms.Label resultLabel;
         private System.Windows.Forms.RadioButton addRB;
         private System.Windows.Forms.RadioButton multiplyRB;
+        private System.Windows.Forms.RadioButton subRB;
+        private System.Windows.Forms.RadioButton divRB;
     }
 }
 

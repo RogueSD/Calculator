@@ -8,13 +8,13 @@ namespace ClassLibrary1
 {
     public class Class1
     {
-        public double delenie(double A, double B) {
+        public static double delenie(double A, double B) {
             
             return A/B;
 
         }
 
-        public double minus(double A, double B)
+        public static double minus(double A, double B)
         {
             return A - B;
         }

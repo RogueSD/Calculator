@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Calculator.Evaluations;
+using ClassLibrary1;
 
 namespace calc
 {
@@ -24,6 +25,14 @@ namespace calc
             {
                 func = Evaluator.Multiply;
             }
+            else if(subRB.Checked)
+            {
+                func = Class1.minus;
+            }
+            else if(divRB.Checked)
+            {
+                func = Class1.delenie;
+            }    
             else
             {
                 MessageBox.Show("Не выбрана операция!");
@@ -67,6 +76,16 @@ namespace calc
         private void multiplyRB_CheckedChanged(object sender, EventArgs e)
         {
             operationLabel.Text = "*";
+        }
+
+        private void subRB_CheckedChanged(object sender, EventArgs e)
+        {
+            operationLabel.Text = "-";
+        }
+
+        private void divRB_CheckedChanged(object sender, EventArgs e)
+        {
+            operationLabel.Text = "/";
         }
     }
 }
